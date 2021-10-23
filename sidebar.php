@@ -64,7 +64,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.php" class="nav-link">
+                  <a href="user_register.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add System User</p>
                 </a>
