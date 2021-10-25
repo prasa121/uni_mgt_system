@@ -78,14 +78,14 @@ include 'connection.php';
             </div>
           </div>
          
-            <form action="" method="POST">
+            <form action="payment_processing.php" method="POST">
             
           <div class="card-body">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Student </label>  <label style='color:red;'> *</label>
-                  <select class="form-control select2" style="width: 100%;" required="">
+                  <select class="form-control select2" style="width: 100%;" name="student_id" required="">
                       <option value="">SELECT STUDENT</option>
                    <?php
                    
@@ -113,12 +113,12 @@ include 'connection.php';
                         </label><br>
                  <div class="form-group clearfix">
                       <div class="icheck-primary d-inline">
-                        <input type="radio" id="radioPrimary1" name="r1">
+                        <input type="radio" id="radioPrimary1" name="payment_mode" value="CASH">
                         <label for="radioPrimary1">Cash
                         </label>
                       </div> &nbsp;&nbsp;&nbsp;&nbsp;
                       <div class="icheck-primary d-inline">
-                        <input type="radio" id="radioPrimary2" name="r1">
+                        <input type="radio" id="radioPrimary2" name="payment_mode" value="CARD">
                         <label for="radioPrimary2">Card
                         </label>
                       </div>
@@ -134,7 +134,7 @@ include 'connection.php';
                 <!-- /.form-group -->
                 <div class="form-group">
                   <label>Payment Type</label><label style='color:red;'> *</label>
-                  <select class="form-control select2" style="width: 100%;" required="">
+                  <select class="form-control select2" style="width: 100%;" name="payment_type" required="">
                    <?php
                    
                    
@@ -163,7 +163,7 @@ include 'connection.php';
               <div class="form-group">
                   <label>Date </label><label style='color:red;'> *</label>
                     <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" required="" />
+                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" name="payment_date" required="" />
                         <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                         </div>
@@ -174,14 +174,20 @@ include 'connection.php';
              
                 </div>
               </div>
+              
+             <div class="row">
                <div class="col-md-2">
-                  
-                   <input type="submit" class="btn btn-block btn-outline-primary btn-sm" value="Submit"> 
-                   
-                
-                 </div>
-              <!-- /.col -->
+                   <input type="submit" class="btn btn-block btn-outline-primary btn-sm" value="Submit" /> 
+               </div>
+              <div class="col-md-2">
+                  <a href="index.php"> <input type="button" class="btn btn-block btn-outline-warning btn-sm" value="Cancel"> </a>
+             </div>
             </div>
+          
+              
+              
+              
+          </div>
             <!-- /.row -->
 
           </form>
